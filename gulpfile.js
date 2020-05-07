@@ -1,12 +1,15 @@
 "use strict";
 var gulp = require("gulp");
 var sass = require("gulp-sass");
-gulp.task("sass", function () {
+gulp.task("sass", async function () {
   gulp
-    .src("app/scss/app.scss")
+    .src("scss/**/*.scss")
     .pipe(sass().on("error", sass.logError))
-    .pipe(gulp.dest("app/css"));
+    .pipe(gulp.dest("css/"));
 });
-gulp.task("sass:watch", function () {
-  gulp.watch("app/scss/app.scss", ["sass"]);
+gulp.task("watch", function () {
+  gulp.watch("scss/**/*.scss", gulp.series("sass"));
 });
+
+
+
