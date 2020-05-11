@@ -11,13 +11,13 @@ body {
   font-size: 1.6rem;
   line-height: 1.5;
   text-align: center;
-  color: purple;
+  color: #80008A;
   margin: 0; }
 
 h1 {
   font-size: 5rem;
   margin-bottom: 0; }
-  @media (max-width: 460px) {
+  @media (min-width: 320px) {
     h1 {
       font-size: 3.5rem;
       line-height: 1.2; } }
@@ -34,7 +34,7 @@ main {
   margin: 30px 8px;
   padding: 15px;
   border-radius: 5px;
-  background: yellow; }
+  background: #FFF700; }
   @media (max-width: 460px) {
     main {
       margin: 0; } }
@@ -46,7 +46,7 @@ img {
   margin: 0 auto; }
 
 #img-div {
-  background: yellow;
+  background: #FFF700;
   padding: 10px;
   margin: 0; }
 
@@ -64,7 +64,11 @@ ul {
   max-width: 550px;
   margin: 0 auto 50px auto;
   text-align: left;
-  line-height: 1.6; }
+  line-height: 1.6;
+  padding-left: 2rem; }
+  @media (min-width: 768px) {
+    ul {
+      padding-left: 3rem; } }
   ul > li {
     margin: 16px 0; }
 
@@ -74,8 +78,8 @@ blockquote {
   margin: 0 auto 50px auto;
   text-align: left; }
 
-.test div {
-  background: red; }
-
-.test > div {
-  background: blue; }
+footer {
+  padding: 1.5rem; }
+  @media (min-width: 768px) {
+    footer {
+      padding: 0; } }

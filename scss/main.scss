@@ -1,3 +1,14 @@
+$primary: #80008A;
+$secondary: #FFF700 ;
+$link-color: #477ca7;
+$link-visited: #74638f;
+$bp-xs: 320px;
+$bp-ms: 480px;
+$bp-sm: 768px;
+$bp-md: 992px;
+$bp-lg: 1200px;
+
+
 html {
   /* Setting a base font size of 10px give us easier rem calculations
      Info: 1rem === 10px, 1.5rem === 15px, 2rem === 20px and so forth
@@ -13,7 +24,7 @@ body {
   font-size: 1.6rem;
   line-height: 1.5;
   text-align: center;
-  color: purple;
+  color: $primary;
   margin: 0;
 }
 
@@ -21,7 +32,7 @@ h1 {
   font-size: 5rem;
   margin-bottom: 0;
 
-  @media (max-width: 460px) {
+  @media (min-width: $bp-xs) {
     font-size: 3.5rem;
     line-height: 1.2;
   }
@@ -32,9 +43,9 @@ h2 {
 }
 
 a {
-  color: #477ca7;
+  color: $link-color;
   &:visited {
-    color: #74638f;
+    color: $link-visited;
   }
 }
 
@@ -42,7 +53,7 @@ main {
   margin: 30px 8px;
   padding: 15px;
   border-radius: 5px;
-  background: yellow;
+  background: $secondary;
 
   @media (max-width: 460px) {
     margin: 0;
@@ -57,7 +68,7 @@ img {
 }
 
 #img-div {
-  background: yellow;
+  background: $secondary;
   padding: 10px;
   margin: 0;
 }
@@ -80,6 +91,11 @@ ul {
   margin: 0 auto 50px auto;
   text-align: left;
   line-height: 1.6;
+  padding-left: 2rem;
+
+  @media (min-width: $bp-sm){
+    padding-left: 3rem;
+  }
 
   > li {
     margin: 16px 0;
@@ -93,11 +109,10 @@ blockquote {
   text-align: left;
 }
 
-.test {
-  div {
-    background: red;
-  }
-  > div {
-    background: blue;
+footer {
+  padding: 1.5rem; 
+
+  @media (min-width: $bp-sm){
+    padding: 0; 
   }
 }
