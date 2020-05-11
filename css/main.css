@@ -11,16 +11,20 @@ body {
   font-size: 1.6rem;
   line-height: 1.5;
   text-align: center;
-  color: #80008A;
-  margin: 0; }
+  color: #80008a;
+  margin: 0;
+  background-color: #fff700; }
 
 h1 {
-  font-size: 5rem;
+  font-size: 3rem;
   margin-bottom: 0; }
-  @media (min-width: 320px) {
+  @media (min-width: 480px) {
     h1 {
-      font-size: 3.5rem;
+      font-size: 6rem;
       line-height: 1.2; } }
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 8rem; } }
 
 h2 {
   font-size: 3.25rem; }
@@ -33,8 +37,7 @@ a {
 main {
   margin: 30px 8px;
   padding: 15px;
-  border-radius: 5px;
-  background: #FFF700; }
+  border-radius: 5px; }
   @media (max-width: 460px) {
     main {
       margin: 0; } }
@@ -46,7 +49,6 @@ img {
   margin: 0 auto; }
 
 #img-div {
-  background: #FFF700;
   padding: 10px;
   margin: 0; }
 
