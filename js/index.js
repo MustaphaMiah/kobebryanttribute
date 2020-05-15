@@ -5,12 +5,11 @@
 // can replace main header or put it under my main section, create a new div.
 // use object fit to style photo - CSS
 // TOOLKIT: google, stack overflow, previous projects
-
 // CLUES: Use dot notation. All i need is a place holder in HTML.
 // focus on manipulating what images are returned from the GET request
 // use the id to remove pictures I don't want
 
-console.log("Musty");
+console.log("connected to JavaScript");
 document.addEventListener("DOMContentLoaded", function () {
   const apiURL =
     "https://api.unsplash.com/search/photos/?client_id=Z51eg4jqHrAftoboipjvStieKcYNbFjmMAeOiq19ptg&query=kobe_bryant&per_page=20";
@@ -29,11 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const wantedPhotos = responseJSON.results.filter(function (item) {
         return unwantedPhotos.indexOf(item.id) === -1;
       });
-      console.log(wantedPhotos);
       const randomImage =
         wantedPhotos[Math.floor(Math.random() * wantedPhotos.length)];
-      console.log(randomImage);
-      console.log(randomImage.urls.raw);
       document.getElementById("myImg").src = randomImage.urls.raw;
     });
 });
