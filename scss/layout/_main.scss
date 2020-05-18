@@ -76,9 +76,9 @@ img {
 .object-fit-container {
   width: 100%;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 0 auto;  // margin: 0 auto, automatically centres the element. Only works with display block.
   > div {
-    padding-bottom: 9/16 * 100%;
+    padding-bottom: 9/16 * 100%; // when using aspect ratio, put that element in another div.
     position: relative;
     overflow: hidden;
     > img {
