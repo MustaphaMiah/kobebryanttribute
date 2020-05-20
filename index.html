@@ -22,11 +22,14 @@
     <header>
       <h1 id="title">Kobe Bryant</h1>
       <p>The Black Mamba</p>
+
       <figure id="img-div">
         <img
           id="image"
-          src="images/kobe.jpg"
-          alt="Kobe in his prime standing next to his kit number"
+          class="lazy"
+          src="https://cdn.glitch.com/3a5b333c-942b-4088-9930-e7ea1e516118%2Fplaceholder.png?v=1560442648212"
+          data-src="images/kobe.jpg"
+          alt=""
         />
         <figcaption id="img-caption">
           Kobe in his prime standing next to his kit number, the famous 24.
@@ -97,7 +100,14 @@
           </li>
         </ul>
         <div class="object-fit-container">
-          <div><img id="myImg" alt="Random Kobe Bryant Image" /></div>
+          <div>
+            <img
+              class="lazy"
+              id="myImg"
+              src="https://cdn.glitch.com/3a5b333c-942b-4088-9930-e7ea1e516118%2Fplaceholder.png?v=1560442648212"
+              alt="Random Kobe Bryant Image"
+            />
+          </div>
         </div>
         <blockquote>
           <p>
@@ -120,5 +130,12 @@
         >
       </h3>
     </footer>
+    <noscript>
+      <style>
+        .lazy {
+          display: none;
+        }
+      </style>
+    </noscript>
   </body>
 </html>

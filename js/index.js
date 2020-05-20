@@ -30,6 +30,37 @@ document.addEventListener("DOMContentLoaded", function () {
       });
       const randomImage =
         wantedPhotos[Math.floor(Math.random() * wantedPhotos.length)];
-      document.getElementById("myImg").src = randomImage.urls.raw;
+      document
+        .getElementById("myImg")
+        .setAttribute("data-src", randomImage.urls.raw);
     });
+
+  // Get our lazy-loaded images
+  var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+  console.log("musty1", lazyImages);
+
+  // Do this only if IntersectionObserver is supported
+  if ("IntersectionObserver" in window) {
+    // Create new observer object
+    let lazyImageObserver = new IntersectionObserver(function (
+      entries,
+      observer
+    ) {
+      // Loop through IntersectionObserverEntry objects
+      entries.forEach(function (entry) {
+        // Do these if the target intersects with the root
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target;
+          lazyImage.src = lazyImage.dataset.src;
+          lazyImage.classList.remove("lazy");
+          lazyImageObserver.unobserve(lazyImage);
+        }
+      });
+    });
+
+    // Loop through and observe each image
+    lazyImages.forEach(function (lazyImage) {
+      lazyImageObserver.observe(lazyImage);
+    });
+  }
 });
