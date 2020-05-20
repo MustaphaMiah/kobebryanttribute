@@ -36,8 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   // Get our lazy-loaded images
-  var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
-  console.log("musty1", lazyImages);
+  const lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
 
   // Do this only if IntersectionObserver is supported
   if ("IntersectionObserver" in window) {
