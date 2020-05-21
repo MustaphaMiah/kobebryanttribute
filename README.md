@@ -22,7 +22,7 @@ The main goal of this project was to give me a platform to work on and improve m
 - Object Fit
 - Familiarising myself with lighthouse 
 - WCAG Compliant -A, AA
-- Went through front end check list <http://www.frontendchecklist.io>
+- Familiarise myself with front end check list <http://www.frontendchecklist.io>
 - Hosting site on Github Pages
 
 
