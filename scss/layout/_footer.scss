@@ -1,0 +1,7 @@
+footer {
+    padding: 1.5rem;
+  
+    @media (min-width: $bp-sm) {
+      padding: 0;
+    }
+  }
